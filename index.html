@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>PaymentMenu</title>
+    <script language="javascript">
+        var script = document.createElement('script');
+        var url = "https://ecom.stage.payex.com/checkout/client/7f2e135ad6e18e68adb7964fdf08fb4b00d91b6917d99ca4e38561677d0ceac9?culture=sv-SE&_tc_tid=1edf6f6b042c459eb4debc3b311459e7";
+
+        script.setAttribute('src', url);
+        script.onload = function () {
+            window.payex.hostedView.paymentMenu({
+                container: "payment",
+                //culture: 'en-US',
+                onApplicationConfigured: function onApplicationConfigured(_) { console.log(_) },
+                onPaymentTransactionFailed: function onPaymentTransactionFailed(data) { console.log(data) },
+                onPaymentCompleted: function onPaymentCompleted(data) { console.log(data) },
+                onPaymentFailed: function onPaymentFailed(data) { console.log(data) },
+                onPaymentCanceled: function onPaymentCanceled(data) { console.log(data) },
+                onInstrumentSelected: function onInstrumentSelected(data) { console.log(data) },
+                onError: function onError(data) { console.log(data) },
+                onPaymentCreated: function onPaymentCreated(data) { console.log(data) },
+                onPaymentPending: function onPaymentPending(data) { console.log(data) },
+                onPaymentToS: function onPaymentToS(data) { console.log(data) },
+                onExternalRedirect: function onExternalRedirect(data) { console.log(data) }
+            }).open();
+        };
+        // Append the Payment Menu script to the <head>
+        var head = document.getElementsByTagName('head')[0];
+        head.appendChild(script);
+    </script>
+</head>
+
+<body>
+    <div style="display:flex;justify-content: center;width: 100%;min-height: 500px;align-items: center;">
+        <div style="display:flex;flex-direction:column; align-items: center; width: 70%;">
+            <div id="alert" style="color: #690422; font-weight: 600;font-size: 25px; margin:10px"></div>
+            <div id="payment" style="width: 100%;">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
