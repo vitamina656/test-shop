@@ -39,12 +39,20 @@
             <div id="payment" style="width: 100%;">
 
             </div>
-             <button onClick= "openBankId()">openBankId</button>
+            <button style="color: #690422; font-weight: 600;font-size: 25px; margin:10px" onClick= "openBankId()">openBankId</button>
+            <button style="color: #690422; font-weight: 600;font-size: 25px; margin:10px" onClick= "openBankId2()">openBankId2</button>
+            <button style="color: #690422; font-weight: 600;font-size: 25px; margin:10px" onClick= "openBankId3()">openBankId3</button>
         </div>
     </div>
  <script language="javascript">
        function openBankId() {
             window.location = "bankid:///?autostarttoken=a4904c4c-3bb4-4e3f-8ac3-0e950e529e5f&redirect=null";
+       }
+       function openBankId2() {
+            window.location = "bankid:///?autostarttoken=a4904c4c-3bb4-4e3f-8ac3-0e950e529e5f&redirect=https%3A%2F%2Fvitamina656.github.io%2FtestHtml%2F/";
+       }
+       function openBankId3() {
+            window.location = "https://app.bankid.com/?autostarttoken=a4904c4c-3bb4-4e3f-8ac3-0e950e529e5f&redirect=null";
        }
     </script>
     
