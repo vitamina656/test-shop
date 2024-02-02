@@ -40,6 +40,7 @@
             <button style="color: #690422; font-weight: 600;font-size: 25px; margin:10px" onClick= "openBankId()">openBankId</button>
             <button style="color: #690422; font-weight: 600;font-size: 25px; margin:10px" onClick= "openBankId2()">openBankId2</button>
             <button style="color: #690422; font-weight: 600;font-size: 25px; margin:10px" onClick= "openBankId3()">openBankId3</button>
+            <button style="color: #690422; font-weight: 600;font-size: 25px; margin:10px" onClick= "openBankId4()">openBankId4</button>
         </div>
     </div>
  <script language="javascript">
@@ -54,6 +55,9 @@
        function openBankId3() {
             window.open('https://app.bankid.com/?autostarttoken=a4904c4c-3bb4-4e3f-8ac3-0e950e529e5f&redirect=null', '_blank');
            // opens bankId on Android and iOS(main frame, sub frame), doesn't work the right way on Desktop
+       }
+      function openBankId4() {
+            window.location.href = 'https://app.bankid.com/?autostarttoken=a4904c4c-3bb4-4e3f-8ac3-0e950e529e5f&redirect=null';
        }
     </script>
     
