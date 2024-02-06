@@ -5,32 +5,6 @@
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
     <title>PaymentMenu</title>
-    <script language="javascript">
-        var script = document.createElement('script');
-        var url = "https://ecom.stage.payex.com/checkout/client/d4aa9bcbccdc5cd641af42a2de62b8c95b737616f8d531563f4a79edde028b1a?culture=en-US&_tc_tid=83a81063ded5407c8ac5ccdc503ce79f";
-
-        script.setAttribute('src', url);
-        script.onload = function () {
-            window.payex.hostedView.paymentMenu({
-                container: "payment",
-                //culture: 'en-US',
-                onApplicationConfigured: function onApplicationConfigured(_) { console.log(_) },
-                onPaymentTransactionFailed: function onPaymentTransactionFailed(data) { console.log(data) },
-                onPaymentCompleted: function onPaymentCompleted(data) { console.log(data) },
-                onPaymentFailed: function onPaymentFailed(data) { console.log(data) },
-                onPaymentCanceled: function onPaymentCanceled(data) { console.log(data) },
-                onInstrumentSelected: function onInstrumentSelected(data) { console.log(data) },
-                onError: function onError(data) { console.log(data) },
-                onPaymentCreated: function onPaymentCreated(data) { console.log(data) },
-                onPaymentPending: function onPaymentPending(data) { console.log(data) },
-                onPaymentToS: function onPaymentToS(data) { console.log(data) },
-                onExternalRedirect: function onExternalRedirect(data) { console.log(data) }
-            }).open();
-        };
-        // Append the Payment Menu script to the <head>
-        var head = document.getElementsByTagName('head')[0];
-        head.appendChild(script);
-    </script>
 </head>
 
 <body>
