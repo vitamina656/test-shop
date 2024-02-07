@@ -8,15 +8,19 @@
     <script language="javascript">
         const isMobile = /(android|ipad|iphone|ipod)/i.test(navigator.userAgent);
         const isSafari = navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1;
+        console.log("isMobile: "+isMobile);
+        console.log("isSafari: "+isSafari);
         if (isMobile) {
             if (isSafari) {
-                document.getElementById("alert").innerHTML = "Safari";
+                console.log("Safari");
+                setTimeout(()=> document.getElementById("alert").innerHTML = "Safari", 500);
             } else {
-                document.getElementById("alert").innerHTML = "Mobile, but not Safari";
+                console.log("Mobile, but not Safari");
+                setTimeout(()=> document.getElementById("alert").innerHTML = "Mobile, but not Safari", 500);
             }
         
         } else {
-            document.getElementById("alert").innerHTML = "Desktop";
+            setTimeout(()=> document.getElementById("alert").innerHTML = "Desktop", 500);
         }
     </script>     
 </head>
