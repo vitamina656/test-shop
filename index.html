@@ -7,9 +7,14 @@
     <title>PaymentMenu</title>
     <script language="javascript">
         const isMobile = /(android|ipad|iphone|ipod)/i.test(navigator.userAgent);
-        const isSafari = navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1;
+        const isSafari = navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1 && navigator.userAgent.indexOf('CriOS') == -1 &&
+               navigator.userAgent.indexOf('FxiOS') == -1;
         console.log("isMobile: "+isMobile);
         console.log("isSafari: "+isSafari);
+        console.log('Safari: '+navigator.userAgent.indexOf('Safari'));
+        console.log('Chrome: '+navigator.userAgent.indexOf('Chrome'));
+        console.log('CriOS: '+navigator.userAgent.indexOf('CriOS'));
+        console.log('FxiOS: '+navigator.userAgent.indexOf('FxiOS'));
         if (isMobile) {
             if (isSafari) {
                 console.log("Safari");
