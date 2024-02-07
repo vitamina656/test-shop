@@ -5,12 +5,26 @@
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
     <title>PaymentMenu</title>
+    <script language="javascript">
+        const isMobile = /(android|ipad|iphone|ipod)/i.test(navigator.userAgent);
+        const isSafari = navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1;
+        if (isMobile) {
+            if (isSafari) {
+                document.getElementById("alert").innerHTML = "Safari";
+            } else {
+                document.getElementById("alert").innerHTML = "Mobile, but not Safari";
+            }
+        
+        } else {
+            document.getElementById("alert").innerHTML = "Desktop";
+        }
+    </script>     
 </head>
 
 <body>
     <div style="display:flex;justify-content: center;width: 100%;min-height: 500px;align-items: center;">
         <div style="display:flex;flex-direction:column; align-items: center; width: 70%;">
-        <div style="width: 100%;"> </div>
+        <div id="alert" style="font-weight: 600;font-size: 25px; margin:10px"> </div>
             <button style="color: #690422; font-weight: 600;font-size: 25px; margin:10px" onClick= "openBankId()">openBankId</button>
             <button style="color: #690422; font-weight: 600;font-size: 25px; margin:10px" onClick= "openBankId2()">openBankId2</button>
             <button style="color: #690422; font-weight: 600;font-size: 25px; margin:10px" onClick= "openBankId3()">openBankId3</button>
