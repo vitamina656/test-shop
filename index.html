@@ -10,7 +10,7 @@
         const isiPad = /iPad|Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints > 0;
         const isSafari = navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1 && navigator.userAgent.indexOf('CriOS') == -1 &&
                navigator.userAgent.indexOf('FxiOS') == -1;
-        console.log(navigator);
+        console.log(navigator.userAgent);
         console.log("isMobile: "+isMobile);
         console.log("isiPad: "+isiPad);
         console.log("isSafari: "+isSafari);
@@ -25,7 +25,6 @@
             document.getElementById("Chrome").innerHTML = 'Chrome: '+navigator.userAgent.indexOf('Chrome');
             document.getElementById("CriOS").innerHTML = 'CriOS: '+navigator.userAgent.indexOf('CriOS');
             document.getElementById("FxiOS").innerHTML = 'FxiOS: '+navigator.userAgent.indexOf('FxiOS');
-            document.getElementById("navigator").innerHTML = navigator;
         }, 500);
         if (isMobile) {
             if (isSafari) {
@@ -45,7 +44,7 @@
 <body>
     <div style="display:flex;justify-content: center;width: 100%;min-height: 500px;align-items: center;">
         <div style="display:flex;flex-direction:column; align-items: center; width: 70%;">
-            <div id="alert" style="font-weight: 600;font-size: 25px; margin:10px; text-decoration: underline"> </div>
+            <div id="alert" style="font-weight: 600;font-size: 25px; margin:30px; text-decoration: underline"> </div>
             <div id="isMobile" style="font-weight: 600;font-size: 25px; margin:10px"> </div>
             <div id="isiPad" style="font-weight: 600;font-size: 25px; margin:10px"> </div>
             <div id="Safari" style="font-weight: 600;font-size: 25px; margin:10px"> </div>
