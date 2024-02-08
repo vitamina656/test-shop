@@ -10,7 +10,7 @@
         const isiPad = /iPad|Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints > 0;
         const isSafari = navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1 && navigator.userAgent.indexOf('CriOS') == -1 &&
                navigator.userAgent.indexOf('FxiOS') == -1;
-        console.log(navigator.userAgent);
+        console.log(navigator);
         console.log("isMobile: "+isMobile);
         console.log("isiPad: "+isiPad);
         console.log("isSafari: "+isSafari);
@@ -25,6 +25,7 @@
             document.getElementById("Chrome").innerHTML = 'Chrome: '+navigator.userAgent.indexOf('Chrome');
             document.getElementById("CriOS").innerHTML = 'CriOS: '+navigator.userAgent.indexOf('CriOS');
             document.getElementById("FxiOS").innerHTML = 'FxiOS: '+navigator.userAgent.indexOf('FxiOS');
+            document.getElementById("navigator").innerHTML = navigator.userAgent;
         }, 500);
         if (isMobile) {
             if (isSafari) {
