@@ -6,6 +6,7 @@
     <meta content="utf-8" http-equiv="encoding">
     <title>PaymentMenu</title>
     <script language="javascript">
+        console.log(window.opener);
         const isMobile = /(android|ipad|iphone|ipod)/i.test(navigator.userAgent);
         const isiPad = /iPad|Macintosh/.test(navigator.userAgent) && window.matchMedia("(max-width: 1024px)").matches;
         const isSafari = navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1 && navigator.userAgent.indexOf('CriOS') == -1 &&
@@ -50,6 +51,7 @@
        function openBankId2() {
             window.open('bankid:///?autostarttoken=6f71addd-cfd2-4934-85cb-ab04c8965bd9&redirect=https%3A%2F%2Fecom.stage.payex.com%2Fcheckout%2F20179c5d340910ab81ce196c6606f972b14d047f015afbd898f9c96577e1b0af%3F_tc_tid%3D37726332bac84911999ca54ca773e051');
            // opens bankId and a new browser window at the same time, doesn't work the right way
+           console.log(window.opener);
        }
        function openBankId3() {
             window.open('https://app.bankid.com/?autostarttoken=6f71addd-cfd2-4934-85cb-ab04c8965bd9&redirect=https%3A%2F%2Fecom.stage.payex.com%2Fcheckout%2F20179c5d340910ab81ce196c6606f972b14d047f015afbd898f9c96577e1b0af%3F_tc_tid%3D37726332bac84911999ca54ca773e051');
