@@ -28,7 +28,7 @@ const isSafari2 = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator
             document.getElementById("CriOS").innerHTML = 'CriOS: '+navigator.userAgent.indexOf('CriOS');
             document.getElementById("FxiOS").innerHTML = 'FxiOS: '+navigator.userAgent.indexOf('FxiOS');
             document.getElementById("navigator").innerHTML = navigator.userAgent;
-            document.getElementById("Safari2").innerHTML = 'iS Safari2';
+            document.getElementById("Safari2").innerHTML = 'iS Safari2 '+isSafari2;
         }, 500);
        
         if (isMobile) {
