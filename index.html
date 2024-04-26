@@ -11,6 +11,7 @@
         const isiPad = /iPad|Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints > 0;
         const isSafari = navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1 && navigator.userAgent.indexOf('CriOS') == -1 &&
                navigator.userAgent.indexOf('FxiOS') == -1;
+const isSafari2 = /Safari/.test(userAgent) && !/Chrome/.test(userAgent);
         console.log(navigator);
         console.log("isMobile: "+isMobile);
         console.log("isiPad: "+isiPad);
@@ -27,7 +28,9 @@
             document.getElementById("CriOS").innerHTML = 'CriOS: '+navigator.userAgent.indexOf('CriOS');
             document.getElementById("FxiOS").innerHTML = 'FxiOS: '+navigator.userAgent.indexOf('FxiOS');
             document.getElementById("navigator").innerHTML = navigator.userAgent;
+            document.getElementById("Safari2").innerHTML = 'iS Safari2';
         }, 500);
+       
         if (isMobile) {
             if (isSafari) {
                 console.log("Safari");
@@ -54,6 +57,8 @@
             <div id="CriOS" style="font-weight: 600;font-size: 25px; margin:10px"> </div>
             <div id="FxiOS" style="font-weight: 600;font-size: 25px; margin:10px"> </div>
             <div id="navigator" style="font-weight: 600;font-size: 25px; margin:10px"> </div>
+
+             <div id="Safari2" style="font-weight: 600;font-size: 25px; margin:10px"> </div>
             
             <button style="color: #690422; font-weight: 600;font-size: 25px; margin:10px" onClick= "openBankId()">openBankId</button>
             <button style="color: #690422; font-weight: 600;font-size: 25px; margin:10px" onClick= "openBankId2()">openBankId2</button>
