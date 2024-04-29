@@ -12,10 +12,12 @@
         const isSafari = navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1 && navigator.userAgent.indexOf('CriOS') == -1 &&
                navigator.userAgent.indexOf('FxiOS') == -1;
 const isSafari2 = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
+const isAppleDevice = /iPad|iPhone|iPod/.test(navigator.userAgent);
         console.log(navigator);
         console.log("isMobile: "+isMobile);
         console.log("isiPad: "+isiPad);
         console.log("isSafari: "+isSafari);
+         console.log("isAppleDevice: "+isAppleDevice);
         console.log('Safari: '+navigator.userAgent.indexOf('Safari'));
         console.log('Chrome: '+navigator.userAgent.indexOf('Chrome'));
         console.log('CriOS: '+navigator.userAgent.indexOf('CriOS'));
